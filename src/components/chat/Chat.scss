@@ -1,0 +1,123 @@
+.chat {
+  border-left: 1px solid #dddddd35;
+  border-right:1px solid #dddddd35;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 22px;
+    height: 22px;
+  }
+  .detail {
+    color: white;
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      h2 {
+        font-weight: 600;
+        font-size: 18px;
+      }
+      span {
+        font-size: 14px;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+    }
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dddddd35;
+    .icons img {
+      margin-right: 12px;
+    }
+  }
+  .messages {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     overflow: auto;
+     padding-block: 20px;
+     &::-webkit-scrollbar {
+        width: 0;
+
+     }
+     flex: 1;
+     .message {
+       max-width: 70%;
+        display: flex;
+        gap: 12px;
+        margin-left: 8px;
+        color: white;
+        p {
+            background: rgba(0, 0, 0, 0.271);
+            padding: 12px;
+            border-radius: 8px;
+            margin-block: 7px;
+        }
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .image {
+          width: 100%;
+          height: 300px;
+          border-radius: 10px;
+          margin-block: 7px;
+      }
+     }
+     .message.own {
+        display: block;
+        align-self: flex-end;
+        margin-right: 12px;
+        p {background-color: #5183FD;}
+       
+     }
+  }
+  .send-message {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #dddddd35;
+    gap: 15px;
+    align-items: center;
+    .picker  {
+        position: relative;
+        .wrapper {
+            position: absolute;
+            bottom: 100%;
+        }
+    }
+    button {
+        padding: 8px;
+        background-color: #5183FD;
+        color: white;
+        border-radius: 7px;
+       &:disabled {
+          background-color: #cccccc; /* Light gray background */
+          color: #666666; /* Dark gray text */
+          cursor: not-allowed; /* Show a not-allowed cursor */
+          opacity: 0.6; /* Make the button semi-transparent */
+          border: 1px solid #aaaaaa; /* Light gray border */
+        }
+    }
+    label {
+      margin-top: 7px;
+    }
+    input {
+      flex: 1;
+      padding: 10px 15px;
+      background: rgba(0, 0, 0, 0.271);
+      color: white;
+      border-radius: 7px;
+      &[type="file"] {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    span {
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .user>img {
+        vertical-align: middle;
+        margin-right: 5px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    .tools img {
+        width: 22px;
+        &:nth-child(2) {
+            margin-inline: 13px;
+        }
+    }
+}
